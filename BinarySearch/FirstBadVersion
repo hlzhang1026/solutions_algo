@@ -1,0 +1,27 @@
+
+public int firstBadVersion(int n) {
+    int firstBad = 1;
+    int right = n;
+    while (firstBad < right) {
+        int mid = firstBad + (right - firstBad) / 2;
+        if (isBadVersion(mid)) {
+            right = mid;
+        } else {
+            firstBad = mid + 1;
+        }
+            
+    }
+    return firstBad;
+        
+//         while (firstBad < right - 1) {
+//             int mid = firstBad + (right - firstBad) / 2;
+//             if (isBadVersion(mid)) {
+//                 right = mid;
+//             } else {
+//                 firstBad = mid + 1;
+//             }
+            
+//         }
+//         return isBadVersion(firstBad) ? firstBad : right;
+}
+
