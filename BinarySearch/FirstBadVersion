@@ -11,5 +11,16 @@ public int firstBadVersion(int n) {
         }
     }
     return firstBad;
+    //method 2
+    // while (firstBad < right - 1) {
+    //     int mid = firstBad + (right - firstBad) / 2;
+    //     if (isBadVersion(mid)) {
+    //         right = mid;
+    //     } else {
+    //         firstBad = mid;
+    //     }
+        
+    // }
+    // return isBadVersion(firstBad) ? firstBad : right;
 }
 
